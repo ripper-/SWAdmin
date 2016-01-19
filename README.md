@@ -1,4 +1,2 @@
-"# SWAdmin" 
-"# SWAdmin" 
-"# SWAdmin" 
 # SWAdmin
+Site Editor de Conteúdo

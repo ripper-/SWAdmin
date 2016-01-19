@@ -1,202 +1,99 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-  <title>SWAdmin - Site Edit</title>
-
-  <link type="text/css" rel="stylesheet" href="resources/css/core.css">
-  <link type="text/css" rel="stylesheet" href="resources/css/core" >
-  <link type="text/css" rel="stylesheet" href="resources/css/font-awesome.css">
-</head>
-<body>
-  <!-- NAV BAR -->
-  <div class="page-topbar navbar" role="navigation">
-    <div class="quick-area container-fluid">
-      <!-- LOGO -->
-      <div class="pull-left navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="#" style="margin-top: -5px;">
-          <img src="resources/images/logo.png" class="img-responsive">
-        </a>
-      </div>
-      <div class="pull-left quickleft collapse navbar-collapse" style=""  id="bs-example-navbar-collapse-1">
-        <ul class="info-menu right-links list-inline list-unstyled nav navbar-nav profile">
-          <li class="dropdown tab active"><a href="#" class="active"><i class="material-icons">home</i> Home</a></li>
-          <li class="dropdown tab" ><a href="#"><i class="material-icons">dashboard</i> Sites</a></li>
-          <li class="dropdown tab" ><a href="#"><i class="material-icons">settings</i> Settings</a></li>
-
-        </ul>
-      </div>
-      <!-- User profile -->
-      <div class="pull-right quickright">
-        <ul class="info-menu right-links list-inline list-unstyled">
-          <li class="dropdown profile tab">
-            <a href="#" class="dropdown-toggle toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-              <span style="padding-right: 15px;">Bruno de Oliveira Severino</span>
-              <img src="resources/images/avatar.png" alt="user-image" class="img-circle img-inline ng-scope">
-            </a>
-            <ul class="dropdown-menu dropdown-menu-right" role="menu">
-              <li>
-                <a style="padding:10px">
-                  <i class="material-icons">settings</i> Settings
-                </a>
-              </li>
-              <li>
-                <a style="padding:10px">
-                  <i class="material-icons">person</i> Profile
-                </a>
-              </li>
-              <li>
-                <a style="padding:10px">
-                  <i class="material-icons">help</i> Help
-                </a>
-              </li>
-              <li class="last">
-                <a style="padding:10px">
-                  <i class="material-icons">lock</i> Logout
-                </a>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <div class="pull-right pagetitle">
-        <span class="line"></span>
-        <h1>Área Administrativa</h1>
-      </div>
-    </div>
-  </div>
-
-  <!-- START CONTENT -->
-  <section id="main-content" class="">
-    <div class="pull-left mobile-pagetitle">
-      <h1 class="ng-binding">Edit Blog </h1>
-    </div>
-
-    <section class="wrapper main-wrapper " ui-view="">
-      <div class="content-wrapper " ng-init="app.settings.pagetitle = &#39;Edit Blog &#39;;">
-        <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
-          <section class="box ">
-            <header class="panel_header">
-              <h2 class="title pull-left">Content Info</h2>
-            </header>
-            <div class="content-body padding-bottom-0">
-              <div class="row">
-                <form action="http://jaybabani.com/slant/preview/angular/blog.html#" method="post" class="ng-pristine ng-valid">
-                  <div class="col-lg-8 col-md-8 col-sm-9 col-xs-12">
-                    <div class="form-group">
-                      <label class="form-label" for="field-1">Title</label>
-                      <span class="desc"></span>
-                      <div class="controls">
-                        <input type="text" value="Lorem ipsum dolor sit amet" class="form-control" id="field-1">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-12 col-sm-12 col-xs-12">
-                    <label class="form-label" for="field-6">Blog Post Content</label>
-                    <div class="form-group wysiwyg">
-                      <span class="desc"></span>
-                      <div class="btn-toolbar m-b-sm btn-editor" data-role="editor-toolbar" data-target="#editor">
-                        <div class="btn-group dropdown margin-left-0" uib-dropdown="">
-                          <a class="btn btn-default btn-border dropdown-toggle" uib-dropdown-toggle="" uib-tooltip="Font" aria-haspopup="true" aria-expanded="false"><i class="fa fa-font"></i><b class="caret"></b></a>
-                          <ul class="dropdown-menu">
-                            <li><a href="" data-edit="fontName Serif" style="font-family:&#39;Serif&#39;">Serif</a>
-                            </li>
-                            <li><a href="" data-edit="fontName Sans" style="font-family:&#39;Sans&#39;">Sans</a>
-                            </li>
-                            <li><a href="" data-edit="fontName Arial" style="font-family:&#39;Arial&#39;">Arial</a>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="btn-group dropdown" uib-dropdown="">
-                          <a class="btn btn-default btn-border dropdown-toggle" uib-dropdown-toggle="" data-toggle="dropdown" uib-tooltip="Font Size" aria-haspopup="true" aria-expanded="false"><i class="fa fa-text-height"></i>&nbsp;<b class="caret"></b></a>
-                          <ul class="dropdown-menu">
-                            <li><a href="" data-edit="fontSize 5" style="font-size:24px">Huge</a>
-                            </li>
-                            <li><a href="" data-edit="fontSize 3" style="font-size:18px">Normal</a>
-                            </li>
-                            <li><a href="" data-edit="fontSize 1" style="font-size:14px">Small</a>
-                            </li>
-                          </ul>
-                        </div>
-                        <div class="btn-group">
-                          <a class="btn btn-default btn-border btn-info" data-edit="bold" uib-tooltip="Bold (Ctrl/Cmd+B)"><i class="fa fa-bold"></i></a>
-                          <a class="btn btn-default btn-border" data-edit="italic" uib-tooltip="Italic (Ctrl/Cmd+I)"><i class="fa fa-italic"></i></a>
-                          <a class="btn btn-default btn-border" data-edit="strikethrough" uib-tooltip="Strikethrough"><i class="fa fa-strikethrough"></i></a>
-                          <a class="btn btn-default btn-border" data-edit="underline" uib-tooltip="Underline (Ctrl/Cmd+U)"><i class="fa fa-underline"></i></a>
-                        </div>
-                        <div class="btn-group">
-                          <a class="btn btn-default btn-border" data-edit="insertunorderedlist" uib-tooltip="Bullet list"><i class="fa fa-list-ul"></i></a>
-                          <a class="btn btn-default btn-border" data-edit="insertorderedlist" uib-tooltip="Number list"><i class="fa fa-list-ol"></i></a>
-                          <a class="btn btn-default btn-border" data-edit="outdent" uib-tooltip="Reduce indent (Shift+Tab)"><i class="fa fa-dedent"></i></a>
-                          <a class="btn btn-default btn-border" data-edit="indent" uib-tooltip="Indent (Tab)"><i class="fa fa-indent"></i></a>
-                        </div>
-                        <div class="btn-group">
-                          <a class="btn btn-default btn-border btn-info" data-edit="justifyleft" uib-tooltip="Align Left (Ctrl/Cmd+L)"><i class="fa fa-align-left"></i></a>
-                          <a class="btn btn-default btn-border" data-edit="justifycenter" uib-tooltip="Center (Ctrl/Cmd+E)"><i class="fa fa-align-center"></i></a>
-                          <a class="btn btn-default btn-border" data-edit="justifyright" uib-tooltip="Align Right (Ctrl/Cmd+R)"><i class="fa fa-align-right"></i></a>
-                          <a class="btn btn-default btn-border" data-edit="justifyfull" uib-tooltip="Justify (Ctrl/Cmd+J)"><i class="fa fa-align-justify"></i></a>
-                        </div>
-                        <div class="btn-group dropdown" uib-dropdown="">
-                          <a class="btn btn-default btn-border dropdown-toggle" uib-dropdown-toggle="" uib-tooltip="Hyperlink" aria-haspopup="true" aria-expanded="false"><i class="fa fa-link"></i></a>
-                          <div class="dropdown-menu">
-                            <div class="input-group m-l-xs m-r-xs">
-                              <input class="form-control input-sm" id="LinkInput" placeholder="URL" type="text" data-edit="createLink">
-                              <div class="input-group-btn">
-                                <button class="btn btn-sm btn-default btn-border" type="button">Add</button>
-                              </div>
-                            </div>
-                          </div>
-                          <a class="btn btn-default btn-border" data-edit="unlink" uib-tooltip="Remove Hyperlink"><i class="fa fa-cut"></i></a>
-                        </div>
-                        <div class="btn-group">
-                          <a class="btn btn-default btn-border" uib-tooltip="Insert picture (or just drag &amp; drop)" id="pictureBtn"><i class="fa fa-picture-o"></i></a>
-                          <input type="file" data-edit="insertImage" style="position:absolute; opacity:0; width:41px; height:34px">
-                        </div>
-                        <div class="btn-group">
-                          <a class="btn btn-default btn-border" data-edit="undo" uib-tooltip="Undo (Ctrl/Cmd+Z)"><i class="fa fa-undo"></i></a>
-                          <a class="btn btn-default btn-border" data-edit="redo" uib-tooltip="Redo (Ctrl/Cmd+Y)"><i class="fa fa-repeat"></i></a>
-                        </div>
-                      </div>
-                      <br>
-                      <div ui-jq="wysiwyg" class="form-control wysiwyg-editor" style="overflow:scroll;height:200px;max-height:200px" contenteditable="true">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi odio nisi, volutpat in lacinia ut, dignissim et metus. Nunc vitae nulla condimentum, molestie urna sit amet, tempus turpis. Donec magna tellus, porta in dignissim sed, sagittis a nunc. Pellentesque vehicula porttitor elit eget molestie. Curabitur fringilla lorem eget sem feugiat, consequat laoreet mauris tristique. Integer rutrum dapibus tortor, sit amet euismod quam porta non. Ut elementum ligula eu augue eleifend tempor. Nunc viverra purus eu sem pellentesque rhoncus. Nam sit amet faucibus sem. Integer dapibus orci quam, non auctor lacus volutpat id. Praesent diam sapien, tempor sed velit ac, lacinia interdum dolor. Integer aliquam metus in est facilisis, ac ultrices neque tincidunt. Nam pretium at sapien id venenatis. Nulla vel nulla sollicitudin, consectetur nunc ac, varius est. Etiam commodo massa id nunc ultrices rutrum.</p>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label class="form-label" for="field-1">Blog Featured Image</label>
-                      <span class="desc"></span>
-                      <img class="img-responsive" ng-src="http://lorempixel.com/120/120/nature/" alt="" style="max-width:120px;" src="http://lorempixel.com/120/120/nature/">
-                      <div class="controls">
-                        <input type="file" class="form-control" id="field-5">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-8 col-md-8 col-sm-9 col-xs-12 padding-bottom-30">
-                    <div class="text-left">
-                      <button type="button" class="btn btn-primary">Save</button>
-                      <button type="button" class="btn">Cancel</button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </section>
+<div class="content-panel">
+  <form action="#" method="post" class="ng-pristine ng-valid">
+    <div class="col-lg-8 col-md-8 col-sm-9 col-xs-12">
+      <div class="form-group">
+        <label class="form-label" for="field-1">Title</label>
+        <span class="desc"></span>
+        <div class="controls">
+          <input type="text" value="Lorem ipsum dolor sit amet" class="form-control" id="field-1">
         </div>
       </div>
-    </section>
-  </section>
-  <!-- END CONTENT -->
-
-  <script src="resources/js/jquery.min.js" charset="utf-8"></script>
-  <script src="resources/vendors/bootstrap-3.3.6-dist/js/bootstrap.min.js" charset="utf-8"></script>
-</body>
-</html>
+    </div>
+    <div class="col-md-12 col-sm-12 col-xs-12">
+      <label class="form-label" for="field-6">Post Content</label>
+      <div class="form-group wysiwyg">
+        <span class="desc"></span>
+        <div class="btn-toolbar m-b-sm btn-editor" data-role="editor-toolbar" data-target="#editor">
+          <div class="btn-group dropdown margin-left-0" uib-dropdown="">
+            <a class="btn btn-default btn-border dropdown-toggle" uib-dropdown-toggle="" uib-tooltip="Font" aria-haspopup="true" aria-expanded="false"><i class="fa fa-font"></i><b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="" data-edit="fontName Serif" style="font-family:&#39;Serif&#39;">Serif</a>
+              </li>
+              <li><a href="" data-edit="fontName Sans" style="font-family:&#39;Sans&#39;">Sans</a>
+              </li>
+              <li><a href="" data-edit="fontName Arial" style="font-family:&#39;Arial&#39;">Arial</a>
+              </li>
+            </ul>
+          </div>
+          <div class="btn-group dropdown" uib-dropdown="">
+            <a class="btn btn-default btn-border dropdown-toggle" uib-dropdown-toggle="" data-toggle="dropdown" uib-tooltip="Font Size" aria-haspopup="true" aria-expanded="false"><i class="fa fa-text-height"></i>&nbsp;<b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="" data-edit="fontSize 5" style="font-size:24px">Huge</a>
+              </li>
+              <li><a href="" data-edit="fontSize 3" style="font-size:18px">Normal</a>
+              </li>
+              <li><a href="" data-edit="fontSize 1" style="font-size:14px">Small</a>
+              </li>
+            </ul>
+          </div>
+          <div class="btn-group">
+            <a class="btn btn-default btn-border btn-info" data-edit="bold" uib-tooltip="Bold (Ctrl/Cmd+B)"><i class="fa fa-bold"></i></a>
+            <a class="btn btn-default btn-border" data-edit="italic" uib-tooltip="Italic (Ctrl/Cmd+I)"><i class="fa fa-italic"></i></a>
+            <a class="btn btn-default btn-border" data-edit="strikethrough" uib-tooltip="Strikethrough"><i class="fa fa-strikethrough"></i></a>
+            <a class="btn btn-default btn-border" data-edit="underline" uib-tooltip="Underline (Ctrl/Cmd+U)"><i class="fa fa-underline"></i></a>
+          </div>
+          <div class="btn-group">
+            <a class="btn btn-default btn-border" data-edit="insertunorderedlist" uib-tooltip="Bullet list"><i class="fa fa-list-ul"></i></a>
+            <a class="btn btn-default btn-border" data-edit="insertorderedlist" uib-tooltip="Number list"><i class="fa fa-list-ol"></i></a>
+            <a class="btn btn-default btn-border" data-edit="outdent" uib-tooltip="Reduce indent (Shift+Tab)"><i class="fa fa-dedent"></i></a>
+            <a class="btn btn-default btn-border" data-edit="indent" uib-tooltip="Indent (Tab)"><i class="fa fa-indent"></i></a>
+          </div>
+          <div class="btn-group">
+            <a class="btn btn-default btn-border btn-info" data-edit="justifyleft" uib-tooltip="Align Left (Ctrl/Cmd+L)"><i class="fa fa-align-left"></i></a>
+            <a class="btn btn-default btn-border" data-edit="justifycenter" uib-tooltip="Center (Ctrl/Cmd+E)"><i class="fa fa-align-center"></i></a>
+            <a class="btn btn-default btn-border" data-edit="justifyright" uib-tooltip="Align Right (Ctrl/Cmd+R)"><i class="fa fa-align-right"></i></a>
+            <a class="btn btn-default btn-border" data-edit="justifyfull" uib-tooltip="Justify (Ctrl/Cmd+J)"><i class="fa fa-align-justify"></i></a>
+          </div>
+          <div class="btn-group dropdown" uib-dropdown="">
+            <a class="btn btn-default btn-border dropdown-toggle" uib-dropdown-toggle="" uib-tooltip="Hyperlink" aria-haspopup="true" aria-expanded="false"><i class="fa fa-link"></i></a>
+            <div class="dropdown-menu">
+              <div class="input-group m-l-xs m-r-xs">
+                <input class="form-control input-sm" id="LinkInput" placeholder="URL" type="text" data-edit="createLink">
+                <div class="input-group-btn">
+                  <button class="btn btn-sm btn-default btn-border" type="button">Add</button>
+                </div>
+              </div>
+            </div>
+            <a class="btn btn-default btn-border" data-edit="unlink" uib-tooltip="Remove Hyperlink"><i class="fa fa-cut"></i></a>
+          </div>
+          <div class="btn-group">
+            <a class="btn btn-default btn-border" uib-tooltip="Insert picture (or just drag &amp; drop)" id="pictureBtn"><i class="fa fa-picture-o"></i></a>
+            <input type="file" data-edit="insertImage" style="position:absolute; opacity:0; width:41px; height:34px">
+          </div>
+          <div class="btn-group">
+            <a class="btn btn-default btn-border" data-edit="undo" uib-tooltip="Undo (Ctrl/Cmd+Z)"><i class="fa fa-undo"></i></a>
+            <a class="btn btn-default btn-border" data-edit="redo" uib-tooltip="Redo (Ctrl/Cmd+Y)"><i class="fa fa-repeat"></i></a>
+          </div>
+        </div>
+        <br>
+        <div ui-jq="wysiwyg" class="form-control wysiwyg-editor" style="overflow:scroll;height:200px;max-height:200px" contenteditable="true">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi odio nisi, volutpat in lacinia ut, dignissim et metus. Nunc vitae nulla condimentum, molestie urna sit amet, tempus turpis. Donec magna tellus, porta in dignissim sed, sagittis a nunc. Pellentesque vehicula porttitor elit eget molestie. Curabitur fringilla lorem eget sem feugiat, consequat laoreet mauris tristique. Integer rutrum dapibus tortor, sit amet euismod quam porta non. Ut elementum ligula eu augue eleifend tempor. Nunc viverra purus eu sem pellentesque rhoncus. Nam sit amet faucibus sem. Integer dapibus orci quam, non auctor lacus volutpat id. Praesent diam sapien, tempor sed velit ac, lacinia interdum dolor. Integer aliquam metus in est facilisis, ac ultrices neque tincidunt. Nam pretium at sapien id venenatis. Nulla vel nulla sollicitudin, consectetur nunc ac, varius est. Etiam commodo massa id nunc ultrices rutrum.</p>
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="field-1">Blog Featured Image</label>
+        <span class="desc"></span>
+        <img class="img-responsive" ng-src="http://lorempixel.com/120/120/nature/" alt="" style="max-width:120px;" src="http://lorempixel.com/120/120/nature/">
+        <div class="controls">
+          <input type="file" class="form-control" id="field-5">
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-8 col-md-8 col-sm-9 col-xs-12 padding-bottom-30">
+      <div class="text-left">
+        <button type="button" class="btn btn-primary">Save</button>
+        <button type="button" class="btn">Cancel</button>
+      </div>
+    </div>
+  </form>
+</div>
