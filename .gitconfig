@@ -1,0 +1,7 @@
+[http]
+proxy = http://bseverin:Embraer175@lnx237in.sjk.emb:9090
+[https]
+proxy = http://bseverin:Embraer175@lnx237in.sjk.emb:9090
+[user]
+	name = Ripper
+	email = bo.severino@gmail.com
